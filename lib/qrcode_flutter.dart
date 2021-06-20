@@ -49,7 +49,7 @@ class QRCaptureController {
   static Future<List<String>> getQrCodeByImagePath(String path) async {
     var _methodChannel = MethodChannel('plugins/qr_capture/method');
     var qrResult =
-        await _methodChannel?.invokeMethod("getQrCodeByImagePath", path);
+        await _methodChannel.invokeMethod("getQrCodeByImagePath", path);
     return List<String>.from(qrResult);
   }
 }
